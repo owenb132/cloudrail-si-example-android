@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/dropbox-android-sdk-1.6.3.jar"
+        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/huelocalsdk.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="d000dfc2cb2590ca9a0f87ac6dbfbaea5f3e6865">
-        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/pre-dexed/debug/dropbox-android-sdk-1.6.3_44c75153bbe4eebff6c771f9b12860c0b6ce6ccd.jar" />
+        sha1="5b7477903b28eafcbe7760fe99628bffef482285">
+        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/huelocalsdk_8311596ce7a073497e014369b3b2d839dca29532.jar" />
     </item>
     <item
-        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/huesdkresources.jar"
+        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/classes.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="8d5739dd1c374f69238221aee0ac3b02fd0f3a0b">
-        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/pre-dexed/debug/huesdkresources_6aca9f062b7cb04df7a77a3a001779a2c696e900.jar" />
+        sha1="e37f9dfce8b4fc0f03fddb3f2f95ae02e0c38505">
+        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-CloudRailSI_d2601e0a5b9dbc8843d37aca95f6c60d7ca8d1c8.jar" />
     </item>
     <item
-        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/exploded-aar/CloudRailSI/jars/classes.jar"
+        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/dropbox-android-sdk-1.6.3.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="942e032f29aced828ad0a18f0d9c1c06cb3242be">
-        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-CloudRailSI_26621a098d7d61e46dc457573ee8f6dfb4aa973d.jar" />
+        sha1="21beba6f91bd8eb26bc11eebe74cf5c7731e9471">
+        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/dropbox-android-sdk-1.6.3_9a79b2f97083eae9b5873a763060b23cf4d9016f.jar" />
     </item>
     <item
-        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/huelocalsdk.jar"
+        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/huesdkresources.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="30f29d399e4a47e170fb274b21f28c9bce964c61">
-        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/CloudRailSI_Prototype_Android/FileViewer/app/build/intermediates/pre-dexed/debug/huelocalsdk_110c6e3a4eb94fca0b13a0bee2d21fae8c967e9e.jar" />
+        sha1="e3debd1af5104b00f4cb80ccf001a6d0a00e743b">
+        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/huesdkresources_f4a5fb4e2877759234dd6a176e63cb8e3f5551cf.jar" />
     </item>
 
 </items>
