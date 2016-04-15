@@ -5,29 +5,36 @@
         jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/huelocalsdk.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="5b7477903b28eafcbe7760fe99628bffef482285">
+        sha1="a2aa7cff2bb44d248cd52fd93bf9b2cb070354aa">
         <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/huelocalsdk_8311596ce7a073497e014369b3b2d839dca29532.jar" />
-    </item>
-    <item
-        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.2"
-        sha1="e37f9dfce8b4fc0f03fddb3f2f95ae02e0c38505">
-        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-CloudRailSI_d2601e0a5b9dbc8843d37aca95f6c60d7ca8d1c8.jar" />
     </item>
     <item
         jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/dropbox-android-sdk-1.6.3.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="21beba6f91bd8eb26bc11eebe74cf5c7731e9471">
+        sha1="c003ae0d6dc1f6a39ff1410ee11dfb79ad7966fd">
         <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/dropbox-android-sdk-1.6.3_9a79b2f97083eae9b5873a763060b23cf4d9016f.jar" />
     </item>
     <item
         jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/huesdkresources.jar"
         jumboMode="false"
         revision="23.0.2"
-        sha1="e3debd1af5104b00f4cb80ccf001a6d0a00e743b">
+        sha1="7fce49feb6c5c62aa13e837d21e60d7df3bcddd4">
         <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/huesdkresources_f4a5fb4e2877759234dd6a176e63cb8e3f5551cf.jar" />
+    </item>
+    <item
+        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d5ca95911f31f0b2d101119b3bdc0f3017095e08">
+        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-CloudRailSI_d2601e0a5b9dbc8843d37aca95f6c60d7ca8d1c8.jar" />
+    </item>
+    <item
+        jar="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/exploded-aar/CloudRailSI/jars/libs/java-json.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3b0f556900faa842471b392524f8c9d67db00414">
+        <dex dex="/Users/patrick/Documents/Arbeit/git/CloudRail2/cloudrail-si-example-android/app/build/intermediates/pre-dexed/debug/java-json_3ee5789d2f05a256e9991bd108e31285776641c3.jar" />
     </item>
 
 </items>
