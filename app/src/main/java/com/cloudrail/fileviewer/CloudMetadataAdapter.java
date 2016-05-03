@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cloudrail.si.cloudStorage.CloudMetaData;
+import com.cloudrail.si.types.CloudMetaData;
 
 import java.util.List;
 
@@ -26,11 +26,11 @@ public class CloudMetadataAdapter extends ArrayAdapter<CloudMetaData> {
 
     @Override
     public void remove(CloudMetaData object) {
-        String target = object.name;
+        String target = object.getName();
 
         for(int i = 0; i < this.data.size(); ++i) {
             CloudMetaData cloudMetaData = this.data.get(i);
-            if(cloudMetaData.name.equals(target)) {
+            if(cloudMetaData.getName().equals(target)) {
                 this.data.remove(i);
                 break;
             }
@@ -55,7 +55,7 @@ public class CloudMetadataAdapter extends ArrayAdapter<CloudMetaData> {
             ImageView img = (ImageView) v.findViewById(R.id.icon);
 
             if(img != null) {
-                if(cmd.isFolder) {
+                if(cmd.getFolder()) {
                     img.setImageResource(R.drawable.ic_file_folder);
                 } else {
                     img.setImageResource(R.drawable.ic_editor_insert_drive_file);
@@ -63,7 +63,7 @@ public class CloudMetadataAdapter extends ArrayAdapter<CloudMetaData> {
             }
 
             TextView tv = (TextView) v.findViewById(R.id.list_item);
-            tv.setText(cmd.name);
+            tv.setText(cmd.getName());
         }
 
         return v;

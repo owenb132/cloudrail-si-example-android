@@ -2,11 +2,11 @@ package com.cloudrail.fileviewer;
 
 import android.app.Activity;
 
-import com.cloudrail.si.cloudStorage.Box;
-import com.cloudrail.si.cloudStorage.CloudStorage;
-import com.cloudrail.si.cloudStorage.Dropbox;
-import com.cloudrail.si.cloudStorage.GoogleDrive;
-import com.cloudrail.si.cloudStorage.OneDrive;
+import com.cloudrail.si.services.Box;
+import com.cloudrail.si.interfaces.CloudStorage;
+import com.cloudrail.si.services.Dropbox;
+import com.cloudrail.si.services.GoogleDrive;
+import com.cloudrail.si.services.OneDrive;
 
 import java.util.concurrent.atomic.AtomicReference;
 

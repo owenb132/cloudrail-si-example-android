@@ -28,15 +28,11 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile(name: 'box-content-sdk-release', ext: 'aar')
-    compile(name: 'CloudRailSDK_1.0.15', ext: 'aar')
-    compile(name: 'CloudRailSI', ext: 'aar')
     compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.onedrive.sdk:onedrive-sdk-android:1.1.+'
-    compile 'com.microsoft.services.msa:msa-auth:0.8.4'
-    compile 'com.microsoft.aad:adal:1.1.11'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.android.support:support-v4:23.2.1'
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile 'com.android.support:design:23.2.1'
+    compile 'com.mcxiaoke.volley:library:1.0.0'
+    compile project(':cloudrail-si-release')
 }

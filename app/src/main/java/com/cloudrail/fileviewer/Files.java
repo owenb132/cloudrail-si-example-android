@@ -25,8 +25,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cloudrail.si.cloudStorage.CloudMetaData;
-import com.cloudrail.si.cloudStorage.CloudStorage;
+import com.cloudrail.si.types.CloudMetaData;
+import com.cloudrail.si.interfaces.CloudStorage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -161,7 +161,7 @@ public class Files extends Fragment {
                         next += name;
 
                         CloudMetaData info = getService().getMetadata(next);
-                        if (info.isFolder) {
+                        if (info.getFolder()) {
                             setNewPath(next);
                         } else {
                             File path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
@@ -304,7 +304,7 @@ public class Files extends Fragment {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                CloudMetaData[] items = getService().getChildren(currentPath);
+                List<CloudMetaData> items = getService().getChildren(currentPath);
                 final List<CloudMetaData> files = sortList(items);
 
                 getOwnActivity().runOnUiThread(new Runnable() {
@@ -348,14 +348,14 @@ public class Files extends Fragment {
         return name.substring(pos + 1);
     }
 
-    private List<CloudMetaData> sortList(CloudMetaData[] list) {
+    private List<CloudMetaData> sortList(List<CloudMetaData> list) {
         List<CloudMetaData> folders = new ArrayList<>();
         List<CloudMetaData> files = new ArrayList<>();
 
         for(CloudMetaData cmd : list) {
             if(cmd == null) continue;
 
-            if(cmd.isFolder) {
+            if(cmd.getFolder()) {
                 folders.add(cmd);
             } else {
                 files.add(cmd);
@@ -371,7 +371,7 @@ public class Files extends Fragment {
         TextView tv = (TextView) this.selectedItem.findViewById(R.id.list_item);
         final String name = (String) tv.getText();
         CloudMetaData cloudMetaData = new CloudMetaData();
-        cloudMetaData.name = name;
+        cloudMetaData.setName(name);
         ArrayAdapter<CloudMetaData> adapter = (ArrayAdapter<CloudMetaData>) this.list.getAdapter();
         adapter.remove(cloudMetaData);
 
@@ -395,9 +395,11 @@ public class Files extends Fragment {
             @Override
             public void run() {
                 InputStream fs = null;
+                long size = -1;
                 try {
                     fs = getOwnActivity().getContentResolver().openInputStream(uri);
-                } catch (FileNotFoundException e) {
+                    size = getOwnActivity().getContentResolver().openAssetFileDescriptor(uri, "r").getLength();
+                } catch (Exception e) {
                     stopSpinner();
                     getOwnActivity().runOnUiThread(new Runnable() {
                         @Override
@@ -413,7 +415,7 @@ public class Files extends Fragment {
                     next += "/";
                 }
                 next += name;
-                getService().upload(next, fs);
+                getService().upload(next, fs, size);
 
                 getOwnActivity().runOnUiThread(new Runnable() {
                     @Override
