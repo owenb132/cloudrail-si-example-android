@@ -1,12 +1,16 @@
 package com.cloudrail.fileviewer;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 
+import com.cloudrail.si.exceptions.ParseException;
 import com.cloudrail.si.services.Box;
 import com.cloudrail.si.interfaces.CloudStorage;
 import com.cloudrail.si.services.Dropbox;
 import com.cloudrail.si.services.GoogleDrive;
 import com.cloudrail.si.services.OneDrive;
+import com.cloudrail.si.services.Service;
 
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -49,10 +53,24 @@ public class Services {
     // --------- Public Methods -----------
     public void prepare(Activity context) {
         this.context = context;
+
         this.initDropbox();
         this.initBox();
         this.initGoogleDrive();
         this.initOneDrive();
+
+        SharedPreferences sharedPreferences = context.getPreferences(Context.MODE_PRIVATE);
+
+        try {
+            String persistent = sharedPreferences.getString("dropboxPersistent", null);
+            if (persistent != null) ((Service) dropbox.get()).loadAsString(persistent);
+            persistent = sharedPreferences.getString("boxPersistent", null);
+            if (persistent != null) ((Service) box.get()).loadAsString(persistent);
+            persistent = sharedPreferences.getString("googledrivePersistent", null);
+            if (persistent != null) ((Service) googledrive.get()).loadAsString(persistent);
+            persistent = sharedPreferences.getString("onedrivePersistent", null);
+            if (persistent != null) ((Service) onedrive.get()).loadAsString(persistent);
+        } catch (ParseException e) {}
     }
 
     public CloudStorage getService(int service) {
@@ -76,5 +94,16 @@ public class Services {
         }
 
         return ret.get();
+    }
+
+    public void storePersistent() {
+        SharedPreferences sharedPreferences = context.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putString("dropboxPersistent", ((Service) dropbox.get()).saveAsString());
+        editor.putString("boxPersistent", ((Service) box.get()).saveAsString());
+        editor.putString("googledrivePersistent", ((Service) googledrive.get()).saveAsString());
+        editor.putString("onedrivePersistent", ((Service) onedrive.get()).saveAsString());
+        editor.commit();
     }
 }

@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cloudrail.si.services.Service;
+
 public class FileViewer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -51,6 +53,12 @@ public class FileViewer extends AppCompatActivity
         } else {
             this.navigateToService(service);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        Services.getInstance().storePersistent();
+        super.onStop();
     }
 
     @Override
